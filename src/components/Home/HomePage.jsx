@@ -1,6 +1,7 @@
 import HeroSection from "./HeroSection";
 import iPhone from "../../assets/iphone-14-pro.webp";
 import mac from "../../assets/mac-system-cut.jfif";
+import FeaturedProducts from "./FeaturedProducts";
 
 const HomePage = () => {
   return (
@@ -17,7 +18,8 @@ const HomePage = () => {
         link="/"
         image={mac}
       />
-      {/* Featured Products */}
+      <FeaturedProducts />
+
       {/* Hero Section */}
     </div>
   );
