@@ -12,13 +12,14 @@ const HomePage = () => {
         link="/"
         image={iPhone}
       />
+      <FeaturedProducts />
+
       <HeroSection
         title="Build the ultimate setup"
         subtitle="You can add Studio Display and colour-matched Magic accessories to your bag after configure your Mac mini."
         link="/"
         image={mac}
       />
-      <FeaturedProducts />
 
       {/* Hero Section */}
     </div>
