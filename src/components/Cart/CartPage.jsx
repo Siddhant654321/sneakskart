@@ -1,5 +1,6 @@
 import "./CartPage.css";
 import user from "../../assets/user.webp";
+import Table from "../Common/Table";
 
 const CartPage = () => {
   return (
@@ -12,7 +13,18 @@ const CartPage = () => {
         </div>
       </div>
 
-      {/* Cart Table */}
+      <Table headings={["Item", "Price", "Quantity", "Total", "Remove"]}>
+        <tbody>
+          <tr>
+            <td>iPhone 14</td>
+            <td>$999</td>
+            <td>1</td>
+            <td>$999</td>
+            <td>Remove</td>
+          </tr>
+        </tbody>
+      </Table>
+
       <table className="cart_bill">
         <tbody>
           <tr>
