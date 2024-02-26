@@ -39,7 +39,23 @@ const SingleProductPage = () => {
         />
       </div>
 
-      <div className="align_center single_product_details"></div>
+      <div className="single_product_details">
+        <h1 className="single_product_title">{product.title}</h1>
+        <p className="single_product_description">{product.description}</p>
+        <p className="single_product_price">${product.price.toFixed(2)}</p>
+
+        <h2 className="quantity_title">Quantity:</h2>
+        <div className="align_center quantity_input">
+          <button className="quantity_input_button" disabled>
+            {" "}
+            -{" "}
+          </button>
+          <p className="quantity_input_count">1</p>
+          <button className="quantity_input_button"> + </button>
+        </div>
+
+        <button className="search_button add_cart">Add to Cart</button>
+      </div>
     </section>
   );
 };
