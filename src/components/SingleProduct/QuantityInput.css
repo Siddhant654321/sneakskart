@@ -1,0 +1,9 @@
+.quantity_input_button:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.quantity_input_count {
+    margin: 0 40px;
+    text-align: center;
+}
