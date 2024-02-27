@@ -1,6 +1,8 @@
 import "./CartPage.css";
 import user from "../../assets/user.webp";
 import Table from "../Common/Table";
+import QuantityInput from "../SingleProduct/QuantityInput";
+import remove from "../../assets/remove.png";
 
 const CartPage = () => {
   return (
@@ -18,9 +20,17 @@ const CartPage = () => {
           <tr>
             <td>iPhone 14</td>
             <td>$999</td>
-            <td>1</td>
+            <td className="align_center table_quantity_input">
+              <QuantityInput />
+            </td>
             <td>$999</td>
-            <td>Remove</td>
+            <td>
+              <img
+                src={remove}
+                alt="remove icon"
+                className="cart_remove_icon"
+              />
+            </td>
           </tr>
         </tbody>
       </Table>
