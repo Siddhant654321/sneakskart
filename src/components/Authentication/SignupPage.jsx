@@ -4,6 +4,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 import "./SignupPage.css";
 import user from "../../assets/user.webp";
+import { useState } from "react";
+import profilPic from "../../assets/user.webp";
 
 const schema = z
   .object({
@@ -25,6 +27,7 @@ const schema = z
   });
 
 const SignupPage = () => {
+  const [profilePic, setProfilePic] = useState(null);
   const {
     register,
     handleSubmit,
@@ -34,6 +37,7 @@ const SignupPage = () => {
   });
 
   const onSubmit = (formData) => console.log(formData);
+  console.log(profilePic);
   return (
     <section className="align_center form_page">
       <form
@@ -44,12 +48,20 @@ const SignupPage = () => {
 
         <div className="image_input_section">
           <div className="image_preview">
-            <img src={user} id="file-ip-1-preview" />
+            <img
+              src={profilePic ? URL.createObjectURL(profilePic) : user}
+              id="file-ip-1-preview"
+            />
           </div>
           <label htmlFor="file-ip-1" className="image_label">
             Upload Image
           </label>
-          <input type="file" id="file-ip-1" className="image_input" />
+          <input
+            type="file"
+            id="file-ip-1"
+            className="image_input"
+            onChange={(e) => setProfilePic(e.target.files[0])}
+          />
         </div>
 
         {/* Form Inputs */}
@@ -133,9 +145,3 @@ const SignupPage = () => {
 };
 
 export default SignupPage;
-
-// name - Name should be at least 3 characters.
-// email - Please enter valid email
-// password - Password must be at least 8 characters.
-// confirmPassword - Confirm Password does not match Password
-// deliveryAddress - Address must be at least 15 characters.
