@@ -10,7 +10,7 @@ import LoginPage from "./components/Authentication/LoginPage";
 const App = () => {
   return (
     <div className="app">
-      <Navbar />\
+      <Navbar />
       <main>
         {/* <HomePage /> */}
         {/* <ProductsPage /> */}
