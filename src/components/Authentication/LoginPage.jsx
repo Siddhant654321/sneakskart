@@ -1,18 +1,13 @@
-import { useRef } from "react";
+import { useState } from "react";
 import "./LoginPage.css";
 
 const LoginPage = () => {
-  const nameRef = useRef(null);
-  const phoneRef = useRef(null);
-
+  const [user, setUser] = useState({
+    name: "",
+    phone: "",
+  });
   const handleSubmit = (e) => {
     e.preventDefault();
-    const user = {
-      name: "",
-      phone: 0,
-    };
-    user.name = nameRef.current.value;
-    user.phone = parseInt(phoneRef.current.value);
     console.log(user);
   };
   return (
@@ -24,20 +19,27 @@ const LoginPage = () => {
             <label htmlFor="name">Name</label>
             <input
               type="text"
-              ref={nameRef}
               id="name"
               className="form_text_input"
               placeholder="Enter your name"
+              onChange={(e) => setUser({ ...user, name: e.target.value })}
+              value={user.name}
             />
           </div>
           <div>
             <label htmlFor="phone">Phone Number</label>
             <input
               type="number"
-              ref={phoneRef}
               id="phone"
               className="form_text_input"
               placeholder="Enter your phone number"
+              onChange={(e) =>
+                setUser({
+                  ...user,
+                  phone: parseInt(e.target.value),
+                })
+              }
+              value={user.phone}
             />
           </div>
 
