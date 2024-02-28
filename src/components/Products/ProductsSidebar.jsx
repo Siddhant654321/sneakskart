@@ -13,6 +13,7 @@ const ProductsSidebar = () => {
           categories.map((category) => (
             <LinkWithIcon
               key={category._id}
+              id={category._id}
               title={category.name}
               link={`products?category=${category.name}`}
               emoji={`http://localhost:8000/category/${category.image}`}

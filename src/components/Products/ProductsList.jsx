@@ -1,12 +1,12 @@
 import useData from "../../hooks/useData";
 import ProductCard from "./ProductCard";
 import "./ProductCard.css";
+import ProductCardSkeleton from "./ProductCardSkeleton";
 import "./ProductsList.css";
 
 const ProductsList = () => {
-  const { data, error } = useData("/products");
-
-  console.log("Data", data);
+  const { data, error, isLoading } = useData("/products");
+  const skeletons = [1, 2, 3, 4, 5, 6, 7, 8];
 
   return (
     <section className="products_list_section">
@@ -22,6 +22,8 @@ const ProductsList = () => {
       </header>
       <div className="products_list">
         {error && <em className="form_error">{error}</em>}
+        {isLoading && skeletons.map((n) => <ProductCardSkeleton key={n} />)}
+
         {data?.products &&
           data.products.map((product) => (
             <ProductCard
