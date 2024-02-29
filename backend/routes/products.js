@@ -18,7 +18,7 @@ router.get("/featured", async (req, res) => {
         images: 1,
         reviews: 1,
         stock: 1,
-      }
+      },
     )
       .sort({ "reviews.rate": -1, "reviews.counts": -1 })
       .limit(3);
