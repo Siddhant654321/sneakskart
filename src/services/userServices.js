@@ -10,3 +10,6 @@ export function signup(user, profile) {
 
   return apiClient.post("/user/signup", body);
 }
+export function login(user) {
+  return apiClient.post("/user/login", user);
+}
