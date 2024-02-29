@@ -6,6 +6,7 @@ import "./SignupPage.css";
 import user from "../../assets/user.webp";
 import { useState } from "react";
 import profilPic from "../../assets/user.webp";
+import { signup } from "../../services/userServices";
 
 const schema = z
   .object({
@@ -36,8 +37,9 @@ const SignupPage = () => {
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = (formData) => console.log(formData);
-  console.log(profilePic);
+  const onSubmit = async (formData) => {
+    await signup(formData, profilePic);
+  };
   return (
     <section className="align_center form_page">
       <form
