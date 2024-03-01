@@ -2,7 +2,10 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Routing from "./components/Routing/Routing";
-import { getUser } from "./services/userServices";
+import { getJwt, getUser } from "./services/userServices";
+import setAuthToken from "./utils/setAuthToken";
+
+setAuthToken(getJwt());
 
 const App = () => {
   const [user, setUser] = useState(null);
