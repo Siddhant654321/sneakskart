@@ -1,7 +1,18 @@
 import { getUser } from "../../services/userServices";
-import { Outlet, Navigate } from "react-router-dom";
+import { Outlet, Navigate, useLocation } from "react-router-dom";
 
 const ProtectedRoute = () => {
-  return getUser() ? <Outlet /> : <Navigate to="/login" />;
+  const location = useLocation();
+
+  return getUser() ? (
+    <Outlet />
+  ) : (
+    <Navigate
+      to="/login"
+      state={{
+        from: location.pathname,
+      }}
+    />
+  );
 };
 export default ProtectedRoute;
