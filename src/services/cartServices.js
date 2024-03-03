@@ -5,3 +5,7 @@ export function addToCartAPI(id, quantity) {
     quantity,
   });
 }
+
+export function getCartAPI() {
+  return apiClient.get("/cart");
+}
