@@ -5,11 +5,12 @@ import Table from "../Common/Table";
 import QuantityInput from "../SingleProduct/QuantityInput";
 import "./CartPage.css";
 import CartContext from "../../contexts/CartContext";
+import { checkoutAPI } from "../../services/orderServices";
 
 const CartPage = () => {
   const [subTotal, setSubTotal] = useState(0);
   const user = useContext(UserContext);
-  const { cart, removeFromCart, updateCart } = useContext(CartContext);
+  const { cart, removeFromCart, updateCart, setCart } = useContext(CartContext);
 
   useEffect(() => {
     let total = 0;
@@ -18,6 +19,19 @@ const CartPage = () => {
     });
     setSubTotal(total);
   }, [cart]);
+
+  const checkout = () => {
+    const oldCart = [...cart];
+    setCart([]);
+    checkoutAPI()
+      .then((res) => {
+        toast.success("Order placed successfully!");
+      })
+      .catch((err) => {
+        toast.error("Something went wrong!");
+        setCart(oldCart);
+      });
+  };
 
   return (
     <section className="align_center cart_page">
@@ -78,7 +92,9 @@ const CartPage = () => {
         </tbody>
       </table>
 
-      <button className="search_button checkout_button">Checkout</button>
+      <button className="search_button checkout_button" onClick={checkout}>
+        Checkout
+      </button>
     </section>
   );
 };
