@@ -7,8 +7,11 @@ import lock from "../../assets/locked.png";
 import LinkWithIcon from "./LinkWithIcon";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import UserContext from "../../contexts/UserContext";
 
-const Navbar = ({ user, cartCount }) => {
+const Navbar = ({ cartCount }) => {
+  const user = useContext(UserContext);
   return (
     <nav className="align_center navbar">
       <div className="align_center">
