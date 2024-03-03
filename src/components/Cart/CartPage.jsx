@@ -9,7 +9,7 @@ import CartContext from "../../contexts/CartContext";
 const CartPage = () => {
   const [subTotal, setSubTotal] = useState(0);
   const user = useContext(UserContext);
-  const { cart, removeFromCart } = useContext(CartContext);
+  const { cart, removeFromCart, updateCart } = useContext(CartContext);
 
   useEffect(() => {
     let total = 0;
@@ -42,6 +42,9 @@ const CartPage = () => {
                 <QuantityInput
                   quantity={item.quantity}
                   stock={item.product.stock}
+                  setQuantity={updateCart}
+                  cartPage={true}
+                  productId={item.product._id}
                 />
               </td>
               <td>${item.quantity * item.product.price}</td>
