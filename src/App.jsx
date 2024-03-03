@@ -8,6 +8,7 @@ import { getJwt, getUser } from "./services/userServices";
 import setAuthToken from "./utils/setAuthToken";
 import { addToCartAPI, getCartAPI } from "./services/cartServices";
 import "react-toastify/dist/ReactToastify.css";
+import CartContext from "./contexts/CartContext";
 
 setAuthToken(getJwt());
 
@@ -70,13 +71,15 @@ const App = () => {
 
   return (
     <UserContext.Provider value={user}>
-      <div className="app">
-        <Navbar cartCount={cart.length} />
-        <main>
-          <ToastContainer position="bottom-right" />
-          <Routing addToCart={addToCart} getCart={getCart} cart={cart} />
-        </main>
-      </div>
+      <CartContext.Provider value={{ cart, addToCart }}>
+        <div className="app">
+          <Navbar />
+          <main>
+            <ToastContainer position="bottom-right" />
+            <Routing />
+          </main>
+        </div>
+      </CartContext.Provider>
     </UserContext.Provider>
   );
 };
