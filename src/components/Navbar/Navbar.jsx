@@ -6,14 +6,16 @@ import order from "../../assets/package.png";
 import lock from "../../assets/locked.png";
 import LinkWithIcon from "./LinkWithIcon";
 import "./Navbar.css";
-import { NavLink } from "react-router-dom";
-import { useContext, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
 import UserContext from "../../contexts/UserContext";
 import CartContext from "../../contexts/CartContext";
 import { useNavigate } from "react-router-dom";
+import { getSuggestionsAPI } from "../../services/productServices";
 
 const Navbar = () => {
   const [search, setSearch] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
   const navigate = useNavigate();
 
   const user = useContext(UserContext);
@@ -24,7 +26,24 @@ const Navbar = () => {
     if (search !== "") {
       navigate(`/products?search=${search.trim()}`);
     }
+    setSuggestions([]);
   };
+
+  useEffect(() => {
+    if (search.trim() !== "") {
+      getSuggestionsAPI(search)
+        .then((res) => {
+          setSuggestions(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } else {
+      setSuggestions([]);
+    }
+  }, [search]);
+
+  console.log(suggestions);
   return (
     <nav className="align_center navbar">
       <div className="align_center">
@@ -40,6 +59,24 @@ const Navbar = () => {
           <button type="submit" className="search_button">
             Search
           </button>
+
+          {suggestions.length > 0 && (
+            <ul className="search_result">
+              {suggestions.map((suggestion) => (
+                <li key={suggestion._id} className="search_suggestion_link">
+                  <Link
+                    to={`/products?search=${suggestion.title}`}
+                    onClick={() => {
+                      setSearch("");
+                      setSuggestions([]);
+                    }}
+                  >
+                    {suggestion.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
         </form>
       </div>
       <div className="align_center navbar_links">
