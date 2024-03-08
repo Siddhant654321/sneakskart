@@ -1,17 +1,21 @@
-import { memo, useContext, useState } from "react";
+import React, { memo, useContext, useState } from "react";
+
 import "./SingleProductPage.css";
+import config from "../../config.json";
 import QuantityInput from "./QuantityInput";
 import { useParams } from "react-router-dom";
 import useData from "../../hooks/useData";
-import Loader from "../Common/Loader";
+import Loader from "./../Common/Loader";
 import CartContext from "../../contexts/CartContext";
 import UserContext from "../../contexts/UserContext";
 
 const SingleProductPage = () => {
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
+
   const { addToCart } = useContext(CartContext);
   const user = useContext(UserContext);
+
   const { id } = useParams();
 
   const { data: product, error, isLoading } = useData(`/products/${id}`);
@@ -25,7 +29,7 @@ const SingleProductPage = () => {
             <div className="single_product_thumbnails">
               {product.images.map((image, index) => (
                 <img
-                  src={`http://localhost:8000/products/${image}`}
+                  src={`${config.backendURL}/products/${image}`}
                   alt={product.title}
                   className={selectedImage === index ? "selected_image" : ""}
                   onClick={() => setSelectedImage(index)}
@@ -34,7 +38,7 @@ const SingleProductPage = () => {
             </div>
 
             <img
-              src={`http://localhost:8000/products/${product.images[selectedImage]}`}
+              src={`${config.backendURL}/products/${product.images[selectedImage]}`}
               alt={product.title}
               className="single_product_display"
             />
@@ -70,4 +74,5 @@ const SingleProductPage = () => {
     </section>
   );
 };
+
 export default memo(SingleProductPage);

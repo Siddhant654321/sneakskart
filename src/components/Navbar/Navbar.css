@@ -56,7 +56,7 @@
     display: flex;
 }
 
-.search_suggestion_link>a {
+.search_suggestion_link > a {
     width: 100%;
     padding: 10px 20px;
     font-size: 18px;
@@ -72,11 +72,11 @@
     font-size: 20px;
 }
 
-.navbar_links>a {
+.navbar_links > a {
     margin: 15px;
 }
 
-.navbar_links>a.active {
+.navbar_links > a.active {
     font-weight: 600;
 }
 

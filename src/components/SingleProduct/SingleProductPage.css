@@ -65,16 +65,6 @@
     margin: 5px 0 16px;
 }
 
-.quantity_input_button {
-    width: 35px;
-    height: 35px;
-    font-size: 25px;
-    background-color: #ff8848;
-    color: #fff;
-    border: none;
-    border-radius: 100%;
-    cursor: pointer;
-}
 .add_cart {
     width: fit-content;
     padding: 8px 18px;
