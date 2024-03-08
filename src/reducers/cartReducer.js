@@ -1,11 +1,10 @@
 const cartReducer = (cart, action) => {
   switch (action.type) {
     case "ADD_TO_CART":
-      const { product, quantity } = action.payload; // Move this line up
-
       const updatedCart = [...cart];
+      const { product, quantity } = action.payload;
       const productIndex = updatedCart.findIndex(
-        (item) => item.product._id === product._id,
+        (item) => item.product._id === product._id
       );
 
       if (productIndex === -1) {
@@ -25,7 +24,7 @@ const cartReducer = (cart, action) => {
     case "REMOVE_FROM_CART":
       const oldCart = [...cart];
       const newCart = oldCart.filter(
-        (item) => item.product._id !== action.payload.id,
+        (item) => item.product._id !== action.payload.id
       );
       return newCart;
   }
