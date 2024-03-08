@@ -1,4 +1,5 @@
 import React, { memo, useContext, useState } from "react";
+import { toast } from "react-toastify";
 
 import "./SingleProductPage.css";
 import config from "../../config.json";
@@ -23,6 +24,12 @@ const SingleProductPage = () => {
     error,
     isLoading,
   } = useData(`/products/${id}`, null, ["products", id]);
+
+  const handleAddToCart = (product, quantity) => {
+    addToCart(product, quantity);
+    toast.success("Item added successfully!");
+  };
+
   return (
     <section className="align_center single_product">
       {error && <em className="form_error">{error.message}</em>}
@@ -66,7 +73,7 @@ const SingleProductPage = () => {
 
                 <button
                   className="search_button add_cart"
-                  onClick={() => addToCart(product, quantity)}
+                  onClick={() => handleAddToCart(product, quantity)}
                 >
                   Add to Cart
                 </button>

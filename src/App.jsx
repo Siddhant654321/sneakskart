@@ -113,11 +113,19 @@ const App = () => {
     [cart],
   );
 
+  const setCart = useCallback(
+    (newCart) => {
+      dispatchCart({ type: "GET_CART", payload: { products: newCart } });
+    },
+    [dispatchCart],
+  );
+
   return (
     <UserContext.Provider value={user}>
       <CartContext.Provider
         value={{
           cart,
+          setCart,
           addToCart,
           removeFromCart,
           updateCart,
