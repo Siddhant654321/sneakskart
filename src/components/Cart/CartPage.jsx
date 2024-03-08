@@ -1,4 +1,4 @@
-import { useContext, useMemo } from "react";
+import { memo, useContext, useMemo } from "react";
 import remove from "../../assets/remove.png";
 import CartContext from "../../contexts/CartContext";
 import UserContext from "../../contexts/UserContext";
@@ -97,4 +97,4 @@ const CartPage = () => {
     </section>
   );
 };
-export default CartPage;
+export default memo(CartPage);
