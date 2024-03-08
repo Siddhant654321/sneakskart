@@ -1,23 +1,22 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useMemo } from "react";
 import remove from "../../assets/remove.png";
+import CartContext from "../../contexts/CartContext";
 import UserContext from "../../contexts/UserContext";
+import { checkoutAPI } from "../../services/orderServices";
 import Table from "../Common/Table";
 import QuantityInput from "../SingleProduct/QuantityInput";
 import "./CartPage.css";
-import CartContext from "../../contexts/CartContext";
-import { checkoutAPI } from "../../services/orderServices";
 
 const CartPage = () => {
-  const [subTotal, setSubTotal] = useState(0);
   const user = useContext(UserContext);
   const { cart, removeFromCart, updateCart, setCart } = useContext(CartContext);
 
-  useEffect(() => {
+  const subTotal = useMemo(() => {
     let total = 0;
     cart.forEach((item) => {
       total += item.product.price * item.quantity;
     });
-    setSubTotal(total);
+    return total;
   }, [cart]);
 
   const checkout = () => {
