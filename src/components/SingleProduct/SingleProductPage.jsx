@@ -18,10 +18,14 @@ const SingleProductPage = () => {
 
   const { id } = useParams();
 
-  const { data: product, error, isLoading } = useData(`/products/${id}`);
+  const {
+    data: product,
+    error,
+    isLoading,
+  } = useData(`/products/${id}`, null, ["products", id]);
   return (
     <section className="align_center single_product">
-      {error && <em className="form_error">{error}</em>}
+      {error && <em className="form_error">{error.message}</em>}
       {isLoading && <Loader />}
       {product && (
         <>
