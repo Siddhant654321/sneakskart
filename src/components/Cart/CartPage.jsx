@@ -1,11 +1,13 @@
-import { memo, useContext, useMemo } from "react";
-import remove from "../../assets/remove.png";
-import CartContext from "../../contexts/CartContext";
+import React, { memo, useContext, useMemo } from "react";
+
 import UserContext from "../../contexts/UserContext";
-import { checkoutAPI } from "../../services/orderServices";
+import "./CartPage.css";
+import remove from "../../assets/remove.png";
 import Table from "../Common/Table";
 import QuantityInput from "../SingleProduct/QuantityInput";
-import "./CartPage.css";
+import CartContext from "../../contexts/CartContext";
+import { checkoutAPI } from "../../services/orderServices";
+import { toast } from "react-toastify";
 
 const CartPage = () => {
   const user = useContext(UserContext);
@@ -16,6 +18,7 @@ const CartPage = () => {
     cart.forEach((item) => {
       total += item.product.price * item.quantity;
     });
+
     return total;
   }, [cart]);
 
@@ -23,10 +26,10 @@ const CartPage = () => {
     const oldCart = [...cart];
     setCart([]);
     checkoutAPI()
-      .then((res) => {
+      .then(() => {
         toast.success("Order placed successfully!");
       })
-      .catch((err) => {
+      .catch(() => {
         toast.error("Something went wrong!");
         setCart(oldCart);
       });
@@ -47,26 +50,26 @@ const CartPage = () => {
 
       <Table headings={["Item", "Price", "Quantity", "Total", "Remove"]}>
         <tbody>
-          {cart.map((item) => (
-            <tr key={item.product._id}>
-              <td>{item.product.title}</td>
-              <td>${item.product.price}</td>
+          {cart.map(({ product, quantity }) => (
+            <tr key={product._id}>
+              <td>{product.title}</td>
+              <td>${product.price}</td>
               <td className="align_center table_quantity_input">
                 <QuantityInput
-                  quantity={item.quantity}
-                  stock={item.product.stock}
+                  quantity={quantity}
+                  stock={product.stock}
                   setQuantity={updateCart}
                   cartPage={true}
-                  productId={item.product._id}
+                  productId={product._id}
                 />
               </td>
-              <td>${item.quantity * item.product.price}</td>
+              <td>${quantity * product.price}</td>
               <td>
                 <img
                   src={remove}
                   alt="remove icon"
                   className="cart_remove_icon"
-                  onClick={() => removeFromCart(item.product._id)}
+                  onClick={() => removeFromCart(product._id)}
                 />
               </td>
             </tr>
@@ -97,4 +100,5 @@ const CartPage = () => {
     </section>
   );
 };
+
 export default memo(CartPage);
