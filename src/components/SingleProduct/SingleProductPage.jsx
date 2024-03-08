@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { memo, useContext, useState } from "react";
 import "./SingleProductPage.css";
 import QuantityInput from "./QuantityInput";
 import { useParams } from "react-router-dom";
@@ -70,4 +70,4 @@ const SingleProductPage = () => {
     </section>
   );
 };
-export default SingleProductPage;
+export default memo(SingleProductPage);
