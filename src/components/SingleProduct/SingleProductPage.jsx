@@ -36,7 +36,7 @@ const SingleProductPage = () => {
       {isLoading && <Loader />}
       {product && (
         <>
-          <div className="align_center">
+          <div className="align_center products_image_container">
             <div className="single_product_thumbnails">
               {product.images.map((image, index) => (
                 <img
@@ -62,6 +62,7 @@ const SingleProductPage = () => {
 
             {user && (
               <>
+              <div className="quantity_section">
                 <h2 className="quantity_title">Quantity:</h2>
                 <div className="align_center quantity_input">
                   <QuantityInput
@@ -70,6 +71,7 @@ const SingleProductPage = () => {
                     stock={product.stock}
                   />
                 </div>
+              </div>
 
                 <button
                   className="search_button add_cart"
