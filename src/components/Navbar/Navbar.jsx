@@ -72,7 +72,7 @@ const Navbar = () => {
   return (
     <header id="navbar">
       <nav className="navbar-container container">
-        <NavLink href="/" className="home-link">
+        <NavLink to="/" className="home-link">
           WishCart
         </NavLink>
         <form className="align_center navbar_form" onSubmit={handleSubmit}>
