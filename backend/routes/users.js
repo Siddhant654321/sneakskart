@@ -1,14 +1,14 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
-const multer = require("multer");
-const path = require("path");
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
-const fs = require("fs");
-const _ = require("lodash");
+import multer from "multer";
+import path from "path";
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+import fs from "fs";
+import _ from "lodash";
 
-const User = require("../models/users");
-const auth = require("../middleware/auth");
+import User from "../models/users.js";
+import auth from "../middleware/auth.js";
 
 // LoggedIN user profile
 router.get("/me", auth, async (req, res) => {
@@ -133,4 +133,4 @@ router.post("/login", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

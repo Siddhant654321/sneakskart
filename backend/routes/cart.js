@@ -1,10 +1,10 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
-const Cart = require("../models/cart");
-const Products = require("../models/products");
-const auth = require("../middleware/auth");
+import Cart from "../models/cart.js";
+import Products from "../models/products.js";
+import auth from "../middleware/auth.js";
 
 // Getting current user cart
 router.get("/", auth, async (req, res) => {
@@ -200,4 +200,4 @@ router.patch("/decrease/:productId", auth, async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

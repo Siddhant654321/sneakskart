@@ -1,18 +1,23 @@
-const express = require("express");
-const cors = require("cors");
-const bodyParser = require("body-parser");
-require("dotenv").config();
-require("./db/connectDB");
+import express from "express";
+import cors from "cors";
+import bodyParser from "body-parser";
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+import 'dotenv/config';
+import "./db/connectDB.js";
 
 const app = express();
 const PORT = process.env.PORT || 8000;
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 // import routes
-const userRoutes = require("./routes/users");
-const categoryRoutes = require("./routes/category");
-const productsRoutes = require("./routes/products");
-const cartRoutes = require("./routes/cart");
-const orderRoutes = require("./routes/order");
+import userRoutes from "./routes/users.js";
+import categoryRoutes from "./routes/category.js";
+import productsRoutes from "./routes/products.js";
+import cartRoutes from "./routes/cart.js";
+import orderRoutes from "./routes/order.js";
 
 // middlewares
 app.use(cors());

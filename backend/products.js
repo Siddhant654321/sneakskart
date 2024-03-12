@@ -1,9 +1,9 @@
-const mongoose = require("mongoose");
-require("dotenv").config();
+import mongoose from "mongoose";
+import 'dotenv/config'
 
-const Category = require("./models/category");
-const Product = require("./models/products");
-const data = require("./data.json");
+import Category from "./models/category";
+import Product from "./models/products";
+import data from "./data.json";
 
 async function restoreProducts() {
   await mongoose.connect(process.env.DATABASE, {});
