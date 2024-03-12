@@ -141,3 +141,44 @@
     height: 100%;
   }
 }
+
+.navbar_form {
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.navbar_search {
+    flex: 1;
+    height: 100%;
+    padding: 0 7px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+}
+
+.search_button {
+    height: 100%;
+    padding: 0 10px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    background-color: #6457f9;
+    color: #fff;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.cart_counts {
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #6457f9;
+    color: #fff;
+    font-size: 15px;
+    margin-left: 5px;
+}
