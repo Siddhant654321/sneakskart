@@ -38,13 +38,13 @@ const Navbar = () => {
           onClick={toggleNavbarVisibility}
         >
           <ul className="navbar-links" onClick={handleNavbarLinksClick}>
-            <li className="navbar-item"><NavLink className="navbar-link" href="/">Home</NavLink></li>
-            <li className="navbar-item"><NavLink className="navbar-link" href="/products">Products</NavLink></li>
-            <li className="navbar-item"><NavLink className="navbar-link" href="/login">LogIn</NavLink></li>
-            <li className="navbar-item"><NavLink className="navbar-link" href="/signup">SignUp</NavLink></li>
-            <li className="navbar-item"><NavLink className="navbar-link" href="/myorders">Orders</NavLink></li>
-            <li className="navbar-item"><NavLink className="navbar-link" href="/Logout">Logout</NavLink></li>
-            <li className="navbar-item"><NavLink className="navbar-link" href="/Cart">Cart</NavLink></li>
+            <li className="navbar-item"><NavLink className="navbar-link" to="/">Home</NavLink></li>
+            <li className="navbar-item"><NavLink className="navbar-link" to="/products">Products</NavLink></li>
+            <li className="navbar-item"><NavLink className="navbar-link" to="/login">LogIn</NavLink></li>
+            <li className="navbar-item"><NavLink className="navbar-link" to="/signup">SignUp</NavLink></li>
+            <li className="navbar-item"><NavLink className="navbar-link" to="/myorders">Orders</NavLink></li>
+            <li className="navbar-item"><NavLink className="navbar-link" to="/Logout">Logout</NavLink></li>
+            <li className="navbar-item"><NavLink className="navbar-link" to="/Cart">Cart</NavLink></li>
           </ul>
         </div>
       </nav>
