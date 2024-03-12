@@ -1,4 +1,4 @@
-module.exports = function (req, res, next) {
+export default function (req, res, next) {
     // 401 Unauthorized
     // 403 Forbidden
     if (!process.env.AUTH) return next();

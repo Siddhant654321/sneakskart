@@ -1,12 +1,12 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
-const Order = require("../models/order");
-const Cart = require("../models/cart");
-const Products = require("../models/products");
-const auth = require("../middleware/auth");
-const admin = require("../middleware/admin");
+import Order from "../models/order.js";
+import Cart from "../models/cart.js";
+import Products from "../models/products.js";
+import auth from "../middleware/auth.js";
+import admin from "../middleware/admin.js";
 
 // add new order details when user pay the bill
 router.post("/checkout", auth, async (req, res) => {
@@ -99,4 +99,4 @@ router.patch("/shipped/:id", auth, admin, async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

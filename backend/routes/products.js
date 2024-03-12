@@ -1,10 +1,10 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
 
-const Products = require("../models/products");
-const Category = require("../models/category");
-const auth = require("../middleware/auth");
-const admin = require("../middleware/admin");
+import Products from "../models/products.js";
+import Category from "../models/category.js";
+import auth from "../middleware/auth.js";
+import admin from "../middleware/admin.js";
 
 // getting feature products
 router.get("/featured", async (req, res) => {
@@ -151,4 +151,4 @@ router.delete("/:id", auth, admin, async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
