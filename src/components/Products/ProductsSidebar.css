@@ -8,3 +8,9 @@
     font-size: 26px;
     margin-bottom: 10px;
 }
+
+@media (max-width: 768px) {
+    .products_sidebar *{
+        font-size: 18px;
+    }
+}
