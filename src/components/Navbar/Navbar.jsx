@@ -1,8 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
+import UserContext from "../../contexts/UserContext";
+import CartContext from "../../contexts/CartContext";
+import { getSuggestionsAPI } from "../../services/productServices";
 
 const Navbar = () => {
+
+  const user = useContext(UserContext);
+  const { cart } = useContext(CartContext);
 
   const [isNavbarExpanded, setIsNavbarExpanded] = useState(false);
 
@@ -40,11 +46,30 @@ const Navbar = () => {
           <ul className="navbar-links" onClick={handleNavbarLinksClick}>
             <li className="navbar-item"><NavLink className="navbar-link" to="/">Home</NavLink></li>
             <li className="navbar-item"><NavLink className="navbar-link" to="/products">Products</NavLink></li>
-            <li className="navbar-item"><NavLink className="navbar-link" to="/login">LogIn</NavLink></li>
-            <li className="navbar-item"><NavLink className="navbar-link" to="/signup">SignUp</NavLink></li>
-            <li className="navbar-item"><NavLink className="navbar-link" to="/myorders">Orders</NavLink></li>
-            <li className="navbar-item"><NavLink className="navbar-link" to="/Logout">Logout</NavLink></li>
-            <li className="navbar-item"><NavLink className="navbar-link" to="/Cart">Cart</NavLink></li>
+            {!user && (
+                <>
+                    <li className="navbar-item"><NavLink className="navbar-link" to="/login">LogIn</NavLink></li>
+                    <li className="navbar-item"><NavLink className="navbar-link" to="/signup">SignUp</NavLink></li>
+                </>
+            )}
+            {user && (
+                    <>
+                        <li className="navbar-item">
+                            <NavLink className="navbar-link" to="/myorders">My Orders</NavLink>
+                        </li>
+                        <li className="navbar-item">
+                            <NavLink className="navbar-link" to="/logout">Logout</NavLink>
+                        </li>
+                        <li className="navbar-item">
+                            <NavLink to='/cart' className='navbar-link'>
+                                Cart{" "}
+                                <p className='align_center cart_counts'>
+                                    {cart.length}
+                                </p>
+                            </NavLink>
+                        </li>
+                    </>
+                )}
           </ul>
         </div>
       </nav>
