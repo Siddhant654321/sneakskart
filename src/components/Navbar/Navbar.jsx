@@ -6,7 +6,6 @@ import CartContext from "../../contexts/CartContext";
 import { getSuggestionsAPI } from "../../services/productServices";
 
 const Navbar = () => {
-
   const [search, setSearch] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [selectedItem, setSelectedItem] = useState(-1);
@@ -38,11 +37,11 @@ const Navbar = () => {
     if (selectedItem < suggestions.length) {
       if (e.key === "ArrowDown") {
         setSelectedItem((current) =>
-          current === suggestions.length - 1 ? 0 : current + 1
+          current === suggestions.length - 1 ? 0 : current + 1,
         );
       } else if (e.key === "ArrowUp") {
         setSelectedItem((current) =>
-          current === 0 ? suggestions.length - 1 : current - 1
+          current === 0 ? suggestions.length - 1 : current - 1,
         );
       } else if (e.key === "Enter" && selectedItem > -1) {
         const suggestion = suggestions[selectedItem];
@@ -57,13 +56,13 @@ const Navbar = () => {
 
   useEffect(() => {
     const delaySuggestions = setTimeout(() => {
-        if (search.trim() !== "") {
-            getSuggestionsAPI(search)
-                .then((res) => setSuggestions(res.data))
-                .catch((err) => console.log(err));
-        } else {
-            setSuggestions([]);
-        }
+      if (search.trim() !== "") {
+        getSuggestionsAPI(search)
+          .then((res) => setSuggestions(res.data))
+          .catch((err) => console.log(err));
+      } else {
+        setSuggestions([]);
+      }
     }, 300);
 
     return () => clearTimeout(delaySuggestions);

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import "./ProductsList.css";
 import ProductCard from "./ProductCard";
@@ -63,11 +63,11 @@ const ProductsList = () => {
         setSortedProducts(products.sort((a, b) => a.price - b.price));
       } else if (sortBy === "rate desc") {
         setSortedProducts(
-          products.sort((a, b) => b.reviews.rate - a.reviews.rate)
+          products.sort((a, b) => b.reviews.rate - a.reviews.rate),
         );
       } else if (sortBy === "rate asc") {
         setSortedProducts(
-          products.sort((a, b) => a.reviews.rate - b.reviews.rate)
+          products.sort((a, b) => a.reviews.rate - b.reviews.rate),
         );
       } else {
         setSortedProducts(products);

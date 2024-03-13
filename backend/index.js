@@ -1,9 +1,9 @@
 import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
-import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
-import 'dotenv/config';
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
+import "dotenv/config";
 import "./db/connectDB.js";
 
 const app = express();
