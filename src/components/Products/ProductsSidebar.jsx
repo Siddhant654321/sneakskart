@@ -2,8 +2,8 @@ import React from "react";
 
 import "./ProductsSidebar.css";
 import config from "../../config.json";
-import LinkWithIcon from "../Navbar/LinkWithIcon";
 import useData from "../../hooks/useData";
+import { NavLink } from "react-router-dom";
 
 const ProductsSidebar = () => {
   const { data: categories, error } = useData(
@@ -21,14 +21,12 @@ const ProductsSidebar = () => {
         {error && <em className="form_error">{error}</em>}
         {categories &&
           categories.map((category) => (
-            <LinkWithIcon
+            <NavLink
               key={category._id}
-              id={category._id}
-              title={category.name}
-              link={`/products?category=${category.name}`}
-              emoji={`${config.backendURL}/category/${category.image}`}
-              sidebar={true}
-            />
+              to={`/products?category=${category.name}`}
+              className="align_center sidebar_link">
+              {category.name}
+            </NavLink>
           ))}
       </div>
     </aside>
