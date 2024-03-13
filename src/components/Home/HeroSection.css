@@ -2,4 +2,11 @@
     background: rgb(132,73,136);
     background: linear-gradient(122deg, rgba(132,73,136,1) 7%, rgba(129,18,226,1) 40%, rgba(110,36,227,1) 51%, rgba(44,72,230,1) 67%);
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.main_hero_image{
+    width: 550px;
+    align-self: center;
 }
