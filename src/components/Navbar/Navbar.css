@@ -6,12 +6,14 @@
 }
 #navbar {
   --navbar-height: 64px;
-  position: static;
+  position: fixed;
   padding: 0px 20px;
   height: var(--navbar-height);
   background-color: var(--navbar-bg-color);
   left: 0;
   right: 0;
+  top: 0;
+  z-index: 999999;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 .navbar-container {
