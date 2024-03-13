@@ -4,9 +4,90 @@
     min-height: 100vh;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .main_hero_image{
     width: 600px;
     align-self: center;
+    z-index: 999;
+}
+
+.hero_section_sphere{
+    position: absolute;
+}
+
+.hero_section_sphere_1{
+    left: 6%;
+    top: 40%;
+    height: 100px;
+    width: 100px;
+    transform: rotate(45deg);
+}
+
+.hero_section_sphere_2{
+    left: 17%;
+    top: 15%;
+    height: 140px;
+    width: 140px;
+    transform: rotate(90deg);
+}
+
+.hero_section_sphere_3{
+    left: 32%;
+    bottom: 20%;
+    height: 190px;
+    width: 190px;
+    transform: translate(-30%, 0);
+    z-index: 0;
+}
+
+.hero_section_sphere_4{
+    right: 12%;
+    top: 20%;
+    height: 80px;
+    width: 80px;
+    transform: translate(30%, 0) rotate(145deg);
+    z-index: 0;
+}
+
+.hero_section_sphere_5{
+    right: 30%;
+    top: 25%;
+    height: 150px;
+    width: 150px;
+    transform: translate(-35%, 0);
+    z-index: 0;
+}
+
+.hero_section_sphere_6{
+    right: 10%;
+    bottom: 30%;
+    height: 100px;
+    width: 100px;
+    transform: rotate(45deg);
+}
+
+.hero_section_sphere_7{
+    left: 10%;
+    bottom: 17%;
+    height: 55px;
+    width: 55px;
+    transform: rotate(30deg);
+}
+
+.hero_section_sphere_8{
+    right: 34%;
+    top: 15%;
+    height: 45px;
+    width: 45px;
+    transform: rotate(75deg);
+}
+
+.hero_section_sphere_9{
+    right: 25%;
+    bottom: 20%;
+    height: 75px;
+    width: 75px;
+    transform: rotate(125deg);
 }
