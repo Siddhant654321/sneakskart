@@ -4,7 +4,7 @@ import "./HeroSection.css";
 
 const HeroSection = () => {
   return (
-    <section>
+    <section className="hero_section">
 
     </section>
   );
