@@ -2,7 +2,6 @@ import { useCallback, useEffect, useReducer, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 
 import UserContext from "./contexts/UserContext";
-import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Routing from "./components/Routing/Routing";
 import { getJwt, getUser } from "./services/userServices";
