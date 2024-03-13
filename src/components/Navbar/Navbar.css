@@ -92,6 +92,7 @@
   visibility: hidden;
   left: 0;
   right: 0;
+  z-index: 9999;
 }
 #navbar-toggle[aria-expanded="true"] + #navbar-menu {
   background-color: rgba(0, 0, 0, 0.4);
