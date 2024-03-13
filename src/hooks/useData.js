@@ -5,7 +5,7 @@ const useData = (
   endpoint,
   customConfig = {},
   queryKey,
-  staleTime = 300_000
+  staleTime = 300_000,
 ) => {
   const fetchFunction = () =>
     apiClient.get(endpoint, customConfig).then((res) => res.data);

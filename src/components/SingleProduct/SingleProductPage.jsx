@@ -62,16 +62,16 @@ const SingleProductPage = () => {
 
             {user && (
               <>
-              <div className="quantity_section">
-                <h2 className="quantity_title">Quantity:</h2>
-                <div className="align_center quantity_input">
-                  <QuantityInput
-                    quantity={quantity}
-                    setQuantity={setQuantity}
-                    stock={product.stock}
-                  />
+                <div className="quantity_section">
+                  <h2 className="quantity_title">Quantity:</h2>
+                  <div className="align_center quantity_input">
+                    <QuantityInput
+                      quantity={quantity}
+                      setQuantity={setQuantity}
+                      stock={product.stock}
+                    />
+                  </div>
                 </div>
-              </div>
 
                 <button
                   className="search_button add_cart"
