@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 import 'dotenv/config'
 
-import Category from "./models/category";
-import Product from "./models/products";
-import data from "./data.json";
+import Category from "./models/category.js";
+import Product from "./models/products.js";
+import data from './data.json' assert { type: 'json' };
 
 async function restoreProducts() {
   await mongoose.connect(process.env.DATABASE, {});
