@@ -14,7 +14,7 @@ const MyOrderPage = () => {
 
   const getProductString = (order) => {
     const productStringArr = order.products.map(
-      (p) => `${p.product.title}(${p.quantity})`,
+      (p) => `${p.product?.title}(${p.quantity})`,
     );
 
     return productStringArr.join(", ");
