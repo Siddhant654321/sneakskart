@@ -1,7 +1,7 @@
 [
     {
         "name": "Female Sneakers",
-        "image": "sneakers-female-1-1.jpeg",
+        "image": "sneakers-female-1-1.png",
         "products": [
           {
             "title": "Coral Mesh Sneakers",
@@ -10,7 +10,7 @@
             "stock": 15,
             "reviews": { "rate": 4.5, "counts": 132 },
             "images": [
-              "sneakers-female-1-1.jpeg",
+              "sneakers-female-1-1.png",
               "sneakers-female-1-2.jpeg",
               "sneakers-female-1-3.jpeg",
               "sneakers-female-1-4.jpeg",
@@ -25,7 +25,7 @@
             "stock": 10,
             "reviews": { "rate": 4.7, "counts": 85 },
             "images": [
-              "sneaker-female-13-1.jpeg",
+              "sneaker-female-13-1.png",
               "sneaker-female-13-2.jpeg",
               "sneaker-female-13-3.jpeg",
               "sneaker-female-13-4.jpeg",
@@ -54,7 +54,7 @@
             "stock": 5,
             "reviews": { "rate": 5.0, "counts": 65 },
             "images": [
-              "sneaker-female-3-1.jpeg",
+              "sneaker-female-3-1.png",
               "sneaker-female-3-2.jpeg",
               "sneaker-female-3-3.jpeg"
             ]
@@ -81,7 +81,7 @@
             "stock": 10,
             "reviews": { "rate": 4.5, "counts": 60 },
             "images": [
-              "sneaker-female-4-1.jpeg",
+              "sneaker-female-4-1.png",
               "sneaker-female-4-2.jpeg",
               "sneaker-female-4-3.jpeg",
               "sneaker-female-4-4.jpeg",
@@ -114,7 +114,7 @@
                 "stock": 20,
                 "reviews": { "rate": 4.3, "counts": 73 },
                 "images": [
-                  "sneakers-ankle-boots-23-1.jpeg",
+                  "sneakers-ankle-boots-23-1.png",
                   "sneakers-ankle-boots-23-2.jpeg",
                   "sneakers-ankle-boots-23-3.jpeg"
                 ]
@@ -126,7 +126,7 @@
                 "stock": 8,
                 "reviews": { "rate": 4.8, "counts": 54 },
                 "images": [
-                  "sneakers-ankle-boots-22-1.jpeg",
+                  "sneakers-ankle-boots-22-1.png",
                   "sneakers-ankle-boots-22-2.jpeg",
                   "sneakers-ankle-boots-22-3.jpeg",
                   "sneakers-ankle-boots-22-4.jpeg"
@@ -139,7 +139,7 @@
                 "stock": 5,
                 "reviews": { "rate": 4.9, "counts": 102 },
                 "images": [
-                  "sneakers-ankle-boots-21-1.jpeg",
+                  "sneakers-ankle-boots-21-1.png",
                   "sneakers-ankle-boots-21-2.jpeg",
                   "sneakers-ankle-boots-21-3.jpeg",
                   "sneakers-ankle-boots-21-4.jpeg",
@@ -153,7 +153,7 @@
                 "stock": 12,
                 "reviews": { "rate": 4.6, "counts": 78 },
                 "images": [
-                  "sneakers-ankle-boots-20-1.jpeg",
+                  "sneakers-ankle-boots-20-1.png",
                   "sneakers-ankle-boots-20-2.jpeg",
                   "sneakers-ankle-boots-20-3.jpeg",
                   "sneakers-ankle-boots-20-4.jpeg",
@@ -168,7 +168,7 @@
                 "stock": 5,
                 "reviews": { "rate": 4.0, "counts": 45 },
                 "images": [
-                  "sneakers-ankle-boots-19-1.jpeg",
+                  "sneakers-ankle-boots-19-1.png",
                   "sneakers-ankle-boots-19-2.jpeg",
                   "sneakers-ankle-boots-19-3.jpeg",
                   "sneakers-ankle-boots-19-4.jpeg",
@@ -242,7 +242,7 @@
                 "stock": 22,
                 "reviews": { "rate": 4.3, "counts": 59 },
                 "images": [
-                  "sneaker-loafers-14-1.jpeg",
+                  "sneaker-loafers-14-1.png",
                   "sneaker-loafers-14-2.jpeg",
                   "sneaker-loafers-14-3.jpeg",
                   "sneaker-loafers-14-4.jpeg",
@@ -253,7 +253,7 @@
     },
     {
         "name": "Male Sneakers",
-        "image": "sneaker-male-12-1.jpeg",
+        "image": "sneaker-male-12-1.png",
         "products": [
             {
                 "title": "Classic White Trainers",
@@ -262,7 +262,7 @@
                 "stock": 15,
                 "reviews": { "rate": 4.5, "counts": 110 },
                 "images": [
-                  "sneaker-male-12-1.jpeg",
+                  "sneaker-male-12-1.png",
                   "sneaker-male-12-2.jpeg",
                   "sneaker-male-12-3.jpeg",
                   "sneaker-male-12-4.jpeg",
@@ -318,7 +318,7 @@
                 "stock": 15,
                 "reviews": { "rate": 4.6, "counts": 88 },
                 "images": [
-                  "sneaker-male-9-1.jpeg",
+                  "sneaker-male-9-1.png",
                   "sneaker-male-9-2.jpeg",
                   "sneaker-male-9-3.jpeg",
                   "sneaker-male-9-4.jpeg"
