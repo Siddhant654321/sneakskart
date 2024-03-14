@@ -10,8 +10,14 @@
 }
 
 @media (max-width: 768px) {
-    .products_sidebar *{
-        font-size: 18px;
+    .sidebar_link {
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: 450px) {
+    .products_sidebar h2{
+        font-size: 22px;
     }
 }
 
