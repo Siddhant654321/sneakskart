@@ -3,6 +3,7 @@ import React from "react";
 import "./HeroSection.css";
 import sneakers_hero_section from '../../assets/sneakers_hero_section.png'
 import sphere_hero_section from '../../assets/sphere_hero_section.png'
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -17,6 +18,9 @@ const HeroSection = () => {
       <img src={sphere_hero_section} alt="" className="hero_section_sphere_7 hero_section_sphere" />
       <img src={sphere_hero_section} alt="" className="hero_section_sphere_8 hero_section_sphere" />
       <img src={sphere_hero_section} alt="" className="hero_section_sphere_9 hero_section_sphere" />
+      <Link to='/products' className='hero_link'>
+        Buy Now
+      </Link>
     </section>
   );
 };
