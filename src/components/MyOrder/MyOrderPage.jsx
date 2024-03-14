@@ -1,5 +1,3 @@
-import React from "react";
-
 import "./MyOrderPage.css";
 import Table from "../Common/Table";
 import useData from "../../hooks/useData";

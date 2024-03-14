@@ -23,6 +23,7 @@ const Navbar = () => {
 
   const handleNavbarLinksClick = (e) => {
     e.stopPropagation();
+    toggleNavbarVisibility();
   };
 
   const handleSubmit = (e) => {
@@ -131,7 +132,11 @@ const Navbar = () => {
         >
           <ul className="navbar-links" onClick={handleNavbarLinksClick}>
             <li className="navbar-item">
-              <NavLink className="navbar-link" to="/">
+              <NavLink
+                className="navbar-link"
+                to="/"
+                onClick={toggleNavbarVisibility}
+              >
                 Home
               </NavLink>
             </li>
