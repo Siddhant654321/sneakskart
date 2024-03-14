@@ -117,6 +117,7 @@
     justify-content: center;
     position: relative;
     z-index: 0;
+    max-width: 100%;
 }
 
 .main_hero_image{
@@ -211,4 +212,137 @@
     width: 75px;
     transform: rotate(125deg);
     animation: floating_9 2s ease-in-out infinite;
+}
+
+@media (max-width: 800px) {
+    .hero_section_sphere_5{
+        display: none;
+    }
+    .hero_section_sphere_9{
+        display: none;
+    }
+    .hero_section_sphere_6{
+        bottom: 15%;
+    }
+    @keyframes floating_6 {
+        50% {
+            transform: translate(60px, 40px) rotate(-90deg);
+        }
+    }
+    .hero_section_sphere_1{
+        left: 3%;
+    }
+    .hero_section_sphere_7{
+        bottom: 10%;
+    }
+    @keyframes floating_7 {
+        50% {
+            left: 15%;
+            bottom: 17%;
+            transform:  rotate(-60deg);
+        }
+    }
+    .hero_section_sphere_2{
+        left: 13%;
+        top: 11%;
+    }
+    .hero_section_sphere_3{
+        left: 33%;
+        bottom: 12%;
+    }
+}
+
+@media (max-width: 570px){
+    .hero_section_sphere_6{
+        display: none;
+    }
+    .hero_section_sphere_3{
+        left: 55%;
+        bottom: 18%;
+        height: 100px;
+        width: 100px;
+        animation: floating_3_new 2s ease-in-out infinite;
+    }
+    @keyframes floating_3_new {
+        50% {
+            left: 50%;
+            bottom: 25%;
+        }
+    }
+    .hero_section_sphere_7{
+        bottom: 20%;
+    }
+    @keyframes floating_7 {
+        50% {
+            left: 18%;
+            bottom: 28%;
+            transform:  rotate(-60deg);
+        }
+    }
+    .hero_section_sphere_2{
+        display: none;
+    }
+    .hero_section_sphere_8{
+        right: 74%;
+        top: 15%;
+    }
+    @keyframes floating_8 {
+        50% {
+            right: 68%;
+            top: 25%;
+            transform: rotate(-70deg);
+        }
+    }
+    
+@keyframes floating_3 {
+    0% {
+        transform: translate(0);
+    }
+
+    50% {
+        transform: translate(-30px, 60px) rotate(-140deg);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+    @keyframes floating_4 {
+        0% {
+            transform: translate(0);
+        }
+
+        50% {
+            transform: translate(-60px, 80px) rotate(100deg);
+        }
+
+        100% {
+            transform: translate(0);
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    .main_hero_image{
+        width: 500px;
+    }
+}
+
+@media (max-width: 570px) {
+    .main_hero_image{
+        width: 400px;
+    }
+}
+
+@media (max-width: 400px) {
+    .main_hero_image{
+        width: 360px;
+    }
+}
+
+@media (max-width: 370px) {
+    .main_hero_image{
+        width: 320px;
+    }
 }
