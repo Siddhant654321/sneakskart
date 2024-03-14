@@ -4,3 +4,16 @@
     margin: 0 auto;
     padding: 32px 48px;
 }
+
+@media screen and (max-width: 1024px) {
+    .myorder_page {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .myorder_page {
+        width: 90%;
+        padding: 16px 24px;
+    }
+}
