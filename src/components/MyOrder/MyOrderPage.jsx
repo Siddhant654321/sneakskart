@@ -8,7 +8,7 @@ const MyOrderPage = () => {
     data: orders,
     error,
     isLoading,
-  } = useData("/order", null, ["myorders"], 1 * 60 * 1000);
+  } = useData("/order", null, ["myorders"], 1 * 60 * 10);
 
   const getProductString = (order) => {
     const productStringArr = order.products.map(
