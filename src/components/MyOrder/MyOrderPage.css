@@ -14,6 +14,13 @@
 @media screen and (max-width: 768px) {
     .myorder_page {
         width: 90%;
-        padding: 16px 24px;
+        padding: 16px 0px;
     }
+}
+
+.common_table th {
+    padding: 0px 5px;
+}
+.common_table td {
+    padding: 0px 5px;
 }
