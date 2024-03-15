@@ -48,7 +48,7 @@
             ]
           },
           {
-            "title": "Elegant Black Female Sneakers",
+            "title": "Elegant Black Sneakers",
             "description": "Polish your look with these elegant black loafers, featuring a glossy finish and luxurious gold-tone hardware.",
             "price": 100,
             "stock": 5,
@@ -60,7 +60,7 @@
             ]
           },
           {
-            "title": "Chic Pink Platform Sneakers",
+            "title": "Chic Pink Sneakers",
             "description": "Add a touch of femininity to your step with these chic pink platform sneakers, offering both height and a sweet pop of color.",
             "price": 95,
             "stock": 7,
@@ -75,7 +75,7 @@
             ]
           },
           {
-            "title": "Glamorous White Platform Sneakers",
+            "title": "White Platform Sneakers",
             "description": "Elevate your sneaker collection with these white platform shoes that sparkle with embellished velcro straps. Perfect for adding a touch of glamour to any casual look.",
             "price": 85,
             "stock": 10,
@@ -108,7 +108,7 @@
                 ]
             },
             {
-                "title": "Urban Explorer Ankle Boots",
+                "title": "Urban Explorer Boots",
                 "description": "Black ankle boots with chunky sole and knit collar for the urban explorer. A blend of warmth and street-smart style.",
                 "price": 99,
                 "stock": 20,
@@ -120,7 +120,7 @@
                 ]
             },
             {
-                "title": "Plush White Winter Sneakers",
+                "title": "White Winter Sneakers",
                 "description": "White winter sneakers with soft faux fur trim. A trendy, sporty look ready for cooler weather.",
                 "price": 85,
                 "stock": 8,
@@ -236,7 +236,7 @@
                 ]
             },
             {
-                "title": "Bohemian Canvas Slip-ons",
+                "title": "Boho Canvas Slip-ons",
                 "description": "Step into the boho-chic trend with these canvas slip-ons, accented with a jute-trimmed sole and a laid-back design for the free-spirited fashionista.",
                 "price": 35,
                 "stock": 22,
