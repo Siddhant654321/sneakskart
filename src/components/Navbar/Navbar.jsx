@@ -165,7 +165,7 @@ const Navbar = () => {
               <>
                 <li className="navbar-item">
                   <NavLink className="navbar-link" to="/myorders">
-                    My Orders
+                    Orders
                   </NavLink>
                 </li>
                 <li className="navbar-item">
