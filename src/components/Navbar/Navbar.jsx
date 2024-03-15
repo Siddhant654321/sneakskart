@@ -76,17 +76,19 @@ const Navbar = () => {
           SneaksKart
         </NavLink>
         <form className="align_center navbar_form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            className="navbar_search"
-            placeholder="Search Products"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            onKeyDown={handleKeyDown}
-          />
-          <button type="submit" className="search_button">
-            Search
-          </button>
+          <div className="search_div">
+            <input
+              type="text"
+              className="navbar_search"
+              placeholder="Search Products"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              onKeyDown={handleKeyDown}
+            />
+            <button type="submit" className="search_button">
+              Search
+            </button>
+          </div>
 
           {suggestions.length > 0 && (
             <ul className="search_result">
